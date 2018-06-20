@@ -14,15 +14,18 @@ namespace FizzBuzzConsole
 
             if (int.TryParse(selectionString, out int selection))
             {
-                var howManyItemsToDisplay = GetHowManyItems();
+                if(selection == 0 || selection == 1)
+                {
+                    var howManyItemsToDisplay = GetHowManyItems();
 
-                if (selection == 0)
-                {
-                    FizzBuzzDefault(howManyItemsToDisplay);
-                }
-                if (selection == 1)
-                {
-                    FizzBuzzCustom(howManyItemsToDisplay);
+                    if (selection == 0)
+                    {
+                        FizzBuzzDefault(howManyItemsToDisplay);
+                    }
+                    if (selection == 1)
+                    {
+                        FizzBuzzCustom(howManyItemsToDisplay);
+                    }
                 }
             }
         }
@@ -90,7 +93,7 @@ namespace FizzBuzzConsole
         {
             Console.WriteLine("(0) Run normal FizzBuzz");
             Console.WriteLine("(1) Run your custom FizzBuzz");
-            Console.WriteLine("Any other to exit");
+            Console.WriteLine("Any other key to exit");
 
             return Console.ReadKey().KeyChar;
         }
