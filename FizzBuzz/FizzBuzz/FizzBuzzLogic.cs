@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace FizzBuzz
@@ -40,11 +39,6 @@ namespace FizzBuzz
                     yield return i.ToString();
                 }
             }
-        }
-
-        public void Take()
-        {
-            throw new NotImplementedException();
         }
     }
 }
