@@ -16,7 +16,7 @@ namespace FizzBuzz
             };
         }
 
-        public FizzBuzzLogic(List<NumberWordPairs> numberWordPairs)
+        public FizzBuzzLogic(ICollection<NumberWordPairs> numberWordPairs)
         {
             NumberWordPairs = numberWordPairs.OrderBy(x => x.DenominatorToReplace).ToList();
         }
